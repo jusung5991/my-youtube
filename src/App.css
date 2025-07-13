@@ -1,38 +1,134 @@
-.App {
+/* 전체 레이아웃 */
+.app-container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 24px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+/* 제목 */
+h2 {
   text-align: center;
+  margin-bottom: 24px;
+  color: #2c3e50;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 검색 폼 */
+.search-form {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* 라벨과 인풋 그룹 */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* 가로 줄 정렬 */
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 라디오 버튼 */
+.radio-row {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 16px;
+}
+
+.radio-row label {
+  font-weight: normal;
+}
+
+/* 검색 버튼 */
+.search-btn {
+  align-self: flex-start;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
   color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.search-btn:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 결과 영역 */
+.results-section {
+  border-top: 1px solid #ddd;
+  padding-top: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+
+td, th {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 14px;
+}
+
+.bottom-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.bottom-buttons button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.bottom-buttons button:hover {
+  background-color: #eee;
 }
